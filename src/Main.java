@@ -1,6 +1,18 @@
+import java.lang.ModuleLayer.Controller;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+
+import Controller.ProductoController;
+import Modelo.Producto;
 
 public class Main {
     public static void main(String[] args) {
+        ProductoController ct = new ProductoController();
+        
+
+     
+        
         List<Producto> lista = Arrays.asList(
                 new Producto("Cámara Digital", "001", Arrays.asList(99.0, 101.0, 100.0)),
                 new Producto("Cámara Ddafadsigital", "001", Arrays.asList(99.0, 101.0, 101.0, 100.0)),
@@ -34,7 +46,24 @@ public class Main {
                 new Producto("Soporte Celular", "029", Arrays.asList(10.0, 12.0, 10.0, 15.0, 12.0)),
                 new Producto("Ventilador USB", "030", Arrays.asList(8.0, 10.0, 8.0, 12.0, 10.0))
 
+                
         );
+        ProductoController controller = new ProductoController();
+        System.out.println("Productos ordenados por nombre y codigo (sin duplicados)");
+        Set<Producto> ordenados = controller.ordenarProductos(lista);
+
+        System.out.println("Clasificacion por porcentaje de caracteres unicos");
+        
+
+       
+
+        
+
+
+
+    
+      
+
 
     }
 }
